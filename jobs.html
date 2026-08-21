@@ -1,1 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Latest Sarkari Jobs - ResultSathi</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* TOP BAR */
+
+.top-strip{
+  background:#0b2f63;
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:13px;
+}
+
+/* HEADER */
+
+.header{
+  max-width:1180px;
+  margin:auto;
+  background:#fff;
+  min-height:105px;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-svg{
+  width:66px;
+  height:66px;
+}
+
+.logo-title{
+  font-size:31px;
+  font-weight:800;
+  color:#103d7a;
+  letter-spacing:-1px;
+}
+
+.logo-title span{
+  color:#168652;
+}
+
+.logo-tagline{
+  margin-top:5px;
+  font-size:13px;
+  color:#64748b;
+}
+
+.ad-box{
+  width:300px;
+  height:70px;
+  border:2px dashed #cbd5e1;
+  border-radius:7px;
+  color:#64748b;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+}
+
+/* NAVBAR */
+
+.nav-wrap{
+  background:#092e68;
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  color:#fff;
+  padding:16px 18px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.nav a:hover,
+.nav a.active{
+  background:#174b91;
+}
+
+/* PAGE HERO */
+
+.page-hero{
+  background:linear-gradient(135deg,#eef5ff,#ffffff);
+  padding:42px 20px;
+  text-align:center;
+  border-bottom:1px solid #dce6f2;
+}
+
+.page-hero h1{
+  font-size:34px;
+  color:#123d78;
+  margin-bottom:10px;
+}
+
+.page-hero p{
+  color:#64748b;
+  font-size:15px;
+}
+
+/* MAIN */
+
+.container{
+  max-width:1180px;
+  margin:auto;
+  padding:35px 20px;
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:2.2fr 1fr;
+  gap:25px;
+}
+
+/* SECTION TITLE */
+
+.section-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+
+.section-heading h2{
+  font-size:25px;
+  color:#123d78;
+}
+
+.total-jobs{
+  background:#e7f0fc;
+  color:#123d78;
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* JOB CARD */
+
+.job-card{
+  background:#fff;
+  border:1px solid #e3eaf3;
+  border-radius:10px;
+  margin-bottom:16px;
+  padding:20px;
+  box-shadow:0 4px 15px rgba(15,23,42,.05);
+  transition:.2s;
+}
+
+.job-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(15,23,42,.10);
+}
+
+.job-card-top{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.job-card h3{
+  color:#123d78;
+  font-size:19px;
+  line-height:1.4;
+  margin-bottom:8px;
+}
+
+.new-badge{
+  display:inline-block;
+  background:#e53935;
+  color:#fff;
+  font-size:10px;
+  font-weight:bold;
+  padding:5px 8px;
+  border-radius:4px;
+}
+
+.job-desc{
+  color:#64748b;
+  font-size:14px;
+  line-height:1.6;
+  margin:12px 0 16px;
+}
+
+.job-info{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.info-box{
+  background:#f5f8fc;
+  border-radius:5px;
+  padding:8px 10px;
+  font-size:12px;
+  color:#475569;
+}
+
+.info-box strong{
+  color:#123d78;
+}
+
+.job-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.date{
+  font-size:12px;
+  color:#94a3b8;
+}
+
+.view-btn{
+  background:#123d78;
+  color:#fff;
+  padding:10px 17px;
+  border-radius:6px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.view-btn:hover{
+  background:#0b2f63;
+}
+
+/* SIDEBAR */
+
+.sidebar-box{
+  background:#fff;
+  border:1px solid #e3eaf3;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+
+.sidebar-title{
+  background:#123d78;
+  color:#fff;
+  padding:15px;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.sidebar-list{
+  list-style:none;
+  padding:0 15px;
+}
+
+.sidebar-list li{
+  padding:13px 0;
+  border-bottom:1px solid #edf1f5;
+  font-size:13px;
+  color:#334155;
+  line-height:1.5;
+}
+
+.sidebar-list li:last-child{
+  border-bottom:none;
+}
+
+.sidebar-list li a:hover{
+  color:#0f5db5;
+}
+
+.small-new{
+  background:#e53935;
+  color:#fff;
+  padding:3px 5px;
+  border-radius:3px;
+  font-size:8px;
+  font-weight:bold;
+  margin-right:4px;
+}
+
+/* AD */
+
+.side-ad{
+  min-height:250px;
+  border:2px dashed #cbd5e1;
+  border-radius:10px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#94a3b8;
+  font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#061f46;
+  color:#fff;
+  margin-top:30px;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:40px 20px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+
+.footer-brand{
+  font-size:25px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.footer-brand span{
+  color:#3eb577;
+}
+
+.footer-text{
+  color:#c5d0df;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.footer-col h3{
+  margin-bottom:14px;
+  font-size:16px;
+}
+
+.footer-col ul{
+  list-style:none;
+}
+
+.footer-col li{
+  color:#c5d0df;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.copyright{
+  border-top:1px solid #28466e;
+  padding:18px;
+  text-align:center;
+  color:#9db0c9;
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .layout{
+    grid-template-columns:1fr;
+  }
+
+  .quick-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:650px){
+
+  .header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .brand{
+    justify-content:center;
+  }
+
+  .ad-box{
+    width:100%;
+  }
+
+  .nav{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+  }
+
+  .nav a{
+    white-space:nowrap;
+    padding:13px 12px;
+    font-size:11px;
+  }
+
+  .page-hero h1{
+    font-size:26px;
+  }
+
+  .container{
+    padding:25px 12px;
+  }
+
+  .section-heading h2{
+    font-size:22px;
+  }
+
+  .job-card{
+    padding:16px;
+  }
+
+  .job-card h3{
+    font-size:17px;
+  }
+
+  .job-card-top,
+  .job-footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .view-btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-strip">
+🔥 Welcome to ResultSathi - Your Trusted Source for Sarkari Jobs & Results
+</div>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="brand">
+
+<div class="logo-svg">
+
+<svg viewBox="0 0 100 100">
+
+<path d="M14 39c13-7 25-7 36 1v40c-11-6-23-6-36 0z"
+fill="#0a478f"/>
+
+<path d="M86 39c-13-7-25-7-36 1v40c11-6 23-6 36 0z"
+fill="#1976d2"/>
+
+<path d="M50 15L90 34 50 53 10 34z"
+fill="#0b3d82"/>
+
+<path d="M78 39v24"
+stroke="#0b3d82"
+stroke-width="4"
+stroke-linecap="round"/>
+
+<circle cx="78" cy="67" r="4"
+fill="#f3b705"/>
+
+<path d="M26 55h16M26 64h16M58 55h16M58 64h16"
+stroke="#fff"
+stroke-width="3"
+stroke-linecap="round"/>
+
+</svg>
+
+</div>
+
+<div>
+
+<div class="logo-title">
+RESULT<span>SATHI</span>
+</div>
+
+<div class="logo-tagline">
+Sarkari Jobs • Results • Updates
+</div>
+
+</div>
+
+</div>
+
+
+<div class="ad-box">
+
+<strong>ADVERTISEMENT</strong>
+
+<span>Your Ad Here</span>
+
+</div>
+
+</header>
+
+
+<!-- NAV -->
+
+<div class="nav-wrap">
+
+<nav class="nav">
+
+<a href="index.html">HOME</a>
+
+<a href="jobs.html" class="active">LATEST JOBS</a>
+
+<a href="#">RESULT</a>
+
+<a href="#">ADMIT CARD</a>
+
+<a href="#">ONLINE FORM</a>
+
+<a href="#">ANSWER KEY</a>
+
+<a href="#">SYLLABUS</a>
+
+</nav>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+<h1>Latest Sarkari Jobs</h1>
+
+<p>
+Find the latest Government Jobs, Recruitment Notifications
+and Online Application Forms.
+</p>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="container">
+
+<div class="layout">
+
+
+<!-- LEFT SIDE -->
+
+<div>
+
+<div class="section-heading">
+
+<h2>Latest Government Jobs</h2>
+
+<div class="total-jobs">
+Latest Updates
+</div>
+
+</div>
+
+
+<!-- JOB 1 -->
+
+<div class="job-card">
+
+<div class="job-card-top">
+
+<div>
+
+<h3>
+<span class="new-badge">NEW</span>
+Latest Government Recruitment 2026
+</h3>
+
+</div>
+
+</div>
+
+<p class="job-desc">
+Check the latest government recruitment notification.
+Eligible candidates can read the official notification
+and apply online before the last date.
+</p>
+
+<div class="job-info">
+
+<div class="info-box">
+<strong>Post Date:</strong> Updated Today
+</div>
+
+<div class="info-box">
+<strong>Last Date:</strong> Check Notification
+</div>
+
+<div class="info-box">
+<strong>Qualification:</strong> Varies
+</div>
+
+</div>
+
+<div class="job-footer">
+
+<div class="date">
+📅 Latest Job Update
+</div>
+
+<a href="#" class="view-btn">
+View Full Details →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- JOB 2 -->
+
+<div class="job-card">
+
+<div class="job-card-top">
+
+<div>
+
+<h3>
+<span class="new-badge">NEW</span>
+Bihar Government Vacancy 2026
+</h3>
+
+</div>
+
+</div>
+
+<p class="job-desc">
+Get complete information about Bihar Government
+Recruitment including eligibility, age limit,
+application dates and official notification.
+</p>
+
+<div class="job-info">
+
+<div class="info-box">
+<strong>Post Date:</strong> Updated Today
+</div>
+
+<div class="info-box">
+<strong>Last Date:</strong> Coming Soon
+</div>
+
+<div class="info-box">
+<strong>Location:</strong> Bihar
+</div>
+
+</div>
+
+<div class="job-footer">
+
+<div class="date">
+📅 Bihar Latest Vacancy
+</div>
+
+<a href="#" class="view-btn">
+View Full Details →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- JOB 3 -->
+
+<div class="job-card">
+
+<div class="job-card-top">
+
+<div>
+
+<h3>
+<span class="new-badge">NEW</span>
+SSC Latest Recruitment 2026
+</h3>
+
+</div>
+
+</div>
+
+<p class="job-desc">
+Find the latest SSC recruitment notifications,
+online application forms, important dates
+and eligibility details.
+</p>
+
+<div class="job-info">
+
+<div class="info-box">
+<strong>Organization:</strong> SSC
+</div>
+
+<div class="info-box">
+<strong>Status:</strong> Latest Update
+</div>
+
+<div class="info-box">
+<strong>Mode:</strong> Online
+</div>
+
+</div>
+
+<div class="job-footer">
+
+<div class="date">
+📅 SSC Recruitment
+</div>
+
+<a href="#" class="view-btn">
+View Full Details →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- JOB 4 -->
+
+<div class="job-card">
+
+<div class="job-card-top">
+
+<div>
+
+<h3>
+<span class="new-badge">NEW</span>
+Railway Recruitment Latest Vacancy
+</h3>
+
+</div>
+
+</div>
+
+<p class="job-desc">
+Check the latest Railway Recruitment vacancy,
+eligibility, application fee, age limit,
+selection process and apply online details.
+</p>
+
+<div class="job-info">
+
+<div class="info-box">
+<strong>Organization:</strong> Railway
+</div>
+
+<div class="info-box">
+<strong>Status:</strong> Recruitment Update
+</div>
+
+<div class="info-box">
+<strong>Mode:</strong> Online
+</div>
+
+</div>
+
+<div class="job-footer">
+
+<div class="date">
+📅 Railway Job Update
+</div>
+
+<a href="#" class="view-btn">
+View Full Details →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SIDEBAR -->
+
+<aside>
+
+
+<div class="sidebar-box">
+
+<div class="sidebar-title">
+Latest Results
+</div>
+
+<ul class="sidebar-list">
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+Latest Government Exam Result
+</a>
+</li>
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+Bihar Board Latest Result
+</a>
+</li>
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+SSC Examination Result
+</a>
+</li>
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+Railway Recruitment Result
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="sidebar-box">
+
+<div class="sidebar-title">
+Admit Card
+</div>
+
+<ul class="sidebar-list">
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+Latest Exam Admit Card
+</a>
+</li>
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+SSC Admit Card
+</a>
+</li>
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+Railway Admit Card
+</a>
+</li>
+
+<li>
+<span class="small-new">NEW</span>
+<a href="#">
+Bihar Government Exam Admit Card
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="side-ad">
+
+<div>
+
+<strong>ADVERTISEMENT</strong>
+
+<br><br>
+
+Your Ad Here
+
+</div>
+
+</div>
+
+</aside>
+
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-inner">
+
+<div>
+
+<div class="footer-brand">
+RESULT<span>SATHI</span>
+</div>
+
+<p class="footer-text">
+ResultSathi is your trusted source for Sarkari Jobs,
+Results, Admit Cards, Online Forms,
+Answer Keys and Government Exam Updates.
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li>Latest Jobs</li>
+
+<li>Results</li>
+
+<li>Admit Card</li>
+
+<li>Online Forms</li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>Information</h3>
+
+<ul>
+
+<li>About Us</li>
+
+<li>Contact Us</li>
+
+<li>Privacy Policy</li>
+
+<li>Disclaimer</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 ResultSathi. All Rights Reserved.
+
+</div>
+
+</footer>
+
+</body>
+</html>
