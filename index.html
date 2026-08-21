@@ -1,600 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="ResultSathi - Latest Sarkari Jobs, Results, Admit Cards, Online Forms, Answer Keys and Syllabus.">
-
-  <title>ResultSathi - Sarkari Jobs, Results & Updates</title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      background:#f4f7fb;
-      color:#1d2939;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    /* TOP BAR */
-
-    .topbar{
-      background:#071f47;
-      color:#ffffff;
-      text-align:center;
-      padding:8px 15px;
-      font-size:13px;
-    }
-
-    /* HEADER */
-
-    .header{
-      background:#ffffff;
-      padding:18px 5%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:13px;
-    }
-
-    .logo-icon{
-      width:62px;
-      height:62px;
-      flex-shrink:0;
-    }
-
-    .logo-icon svg{
-      width:100%;
-      height:100%;
-      display:block;
-    }
-
-    .logo{
-      font-size:30px;
-      font-weight:800;
-      letter-spacing:-1px;
-      color:#0a3472;
-    }
-
-    .logo span{
-      color:#1d8b55;
-    }
-
-    .tagline{
-      margin-top:4px;
-      font-size:13px;
-      color:#667085;
-    }
-
-    .header-ad{
-      width:320px;
-      min-height:80px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      border:2px dashed #cbd5e1;
-      border-radius:8px;
-      background:#f8fafc;
-      color:#64748b;
-      font-size:13px;
-    }
-
-    /* NAVIGATION */
-
-    .nav{
-      background:#092e67;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-
-    .nav a{
-      color:#ffffff;
-      padding:16px 17px;
-      font-size:13px;
-      font-weight:700;
-      transition:0.2s;
-    }
-
-    .nav a:hover{
-      background:#174a90;
-    }
-
-    /* HERO */
-
-    .hero{
-      padding:55px 20px 45px;
-      text-align:center;
-      background:
-        radial-gradient(circle at top left, #dcecff, transparent 40%),
-        linear-gradient(135deg,#eff6ff,#ffffff);
-    }
-
-    .hero h1{
-      color:#0a3472;
-      font-size:36px;
-      margin-bottom:12px;
-    }
-
-    .hero p{
-      color:#667085;
-      font-size:16px;
-      margin-bottom:24px;
-    }
-
-    .search-box{
-      max-width:760px;
-      margin:auto;
-      background:#ffffff;
-      border-radius:10px;
-      overflow:hidden;
-      display:flex;
-      box-shadow:0 8px 25px rgba(15,23,42,0.12);
-      border:1px solid #e2e8f0;
-    }
-
-    .search-box input{
-      width:100%;
-      border:none;
-      outline:none;
-      padding:18px;
-      font-size:15px;
-      color:#334155;
-    }
-
-    .search-box button{
-      border:none;
-      background:#0a3472;
-      color:#ffffff;
-      padding:0 28px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    /* CONTAINER */
-
-    .container{
-      width:92%;
-      max-width:1250px;
-      margin:35px auto;
-    }
-
-    .section-title{
-      text-align:center;
-      color:#0a3472;
-      font-size:26px;
-      margin-bottom:22px;
-    }
-
-    /* QUICK LINKS */
-
-    .quick-grid{
-      display:grid;
-      grid-template-columns:repeat(6,1fr);
-      gap:15px;
-      margin-bottom:35px;
-    }
-
-    .quick-box{
-      min-height:125px;
-      border-radius:12px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      color:#ffffff;
-      font-weight:700;
-      text-align:center;
-      padding:15px 8px;
-      box-shadow:0 6px 16px rgba(15,23,42,0.12);
-      transition:0.2s;
-    }
-
-    .quick-box:hover{
-      transform:translateY(-4px);
-    }
-
-    .quick-icon{
-      width:45px;
-      height:45px;
-      margin-bottom:10px;
-      border-radius:50%;
-      background:rgba(255,255,255,0.2);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:23px;
-    }
-
-    .job-box{
-      background:linear-gradient(135deg,#0a3d82,#1763c5);
-    }
-
-    .result-box{
-      background:linear-gradient(135deg,#0d7744,#20a964);
-    }
-
-    .admit-box{
-      background:linear-gradient(135deg,#d73527,#f15c4c);
-    }
-
-    .form-box{
-      background:linear-gradient(135deg,#d95f00,#f89c21);
-    }
-
-    .answer-box{
-      background:linear-gradient(135deg,#5b249f,#8b55cf);
-    }
-
-    .syllabus-box{
-      background:linear-gradient(135deg,#087879,#17a5a7);
-    }
-
-    /* CONTENT GRID */
-
-    .content-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-
-    .card{
-      background:#ffffff;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 5px 20px rgba(15,23,42,0.08);
-      border:1px solid #e9eef5;
-    }
-
-    .card-head{
-      padding:16px 18px;
-      background:#f8fafc;
-      border-bottom:1px solid #e5e7eb;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .card-head h2{
-      font-size:20px;
-      color:#0a3472;
-    }
-
-    .view-all{
-      color:#1260c4;
-      font-size:12px;
-      font-weight:bold;
-    }
-
-    .updates{
-      list-style:none;
-      padding:5px 18px;
-    }
-
-    .updates li{
-      padding:15px 0;
-      border-bottom:1px solid #edf0f3;
-      font-size:14px;
-      line-height:1.5;
-    }
-
-    .updates li:last-child{
-      border-bottom:none;
-    }
-
-    .badge{
-      display:inline-block;
-      background:#e53935;
-      color:#ffffff;
-      padding:3px 6px;
-      border-radius:4px;
-      font-size:9px;
-      font-weight:bold;
-      margin-right:6px;
-    }
-
-    .update-date{
-      display:block;
-      margin-left:42px;
-      margin-top:4px;
-      color:#94a3b8;
-      font-size:11px;
-    }
-
-    .card-btn{
-      display:block;
-      margin:8px 18px 20px;
-      padding:12px;
-      border-radius:7px;
-      text-align:center;
-      background:#0a3472;
-      color:#ffffff;
-      font-size:14px;
-      font-weight:bold;
-    }
-
-    /* AD AREA */
-
-    .ad-area{
-      width:100%;
-      min-height:120px;
-      margin:35px 0;
-      border:2px dashed #cbd5e1;
-      border-radius:10px;
-      background:#ffffff;
-      color:#94a3b8;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      font-size:14px;
-    }
-
-    /* FOOTER */
-
-    footer{
-      margin-top:40px;
-      background:#061f46;
-      color:#ffffff;
-      padding:45px 5% 20px;
-    }
-
-    .footer-grid{
-      max-width:1250px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:2fr 1fr 1fr 1fr;
-      gap:35px;
-    }
-
-    .footer-brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin-bottom:12px;
-    }
-
-    .footer-brand strong{
-      font-size:22px;
-    }
-
-    .footer-brand strong span{
-      color:#48b879;
-    }
-
-    footer h3{
-      font-size:17px;
-      margin-bottom:14px;
-    }
-
-    footer p{
-      color:#cbd5e1;
-      font-size:14px;
-      line-height:1.7;
-    }
-
-    footer ul{
-      list-style:none;
-    }
-
-    footer li{
-      color:#cbd5e1;
-      margin-bottom:9px;
-      font-size:14px;
-    }
-
-    .footer-bottom{
-      max-width:1250px;
-      margin:30px auto 0;
-      padding-top:18px;
-      border-top:1px solid #29476f;
-      text-align:center;
-      color:#9db0c8;
-      font-size:13px;
-    }
-
-    /* TABLET */
-
-    @media(max-width:1000px){
-
-      .quick-grid{
-        grid-template-columns:repeat(3,1fr);
-      }
-
-      .content-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .footer-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-    }
-
-    /* MOBILE */
-
-    @media(max-width:650px){
-
-      .topbar{
-        font-size:11px;
-      }
-
-      .header{
-        justify-content:center;
-        text-align:center;
-        padding:16px;
-      }
-
-      .brand{
-        justify-content:center;
-      }
-
-      .logo{
-        font-size:24px;
-      }
-
-      .logo-icon{
-        width:52px;
-        height:52px;
-      }
-
-      .tagline{
-        font-size:11px;
-      }
-
-      .header-ad{
-        width:100%;
-        min-height:65px;
-      }
-
-      .nav{
-        justify-content:flex-start;
-        overflow-x:auto;
-        flex-wrap:nowrap;
-      }
-
-      .nav a{
-        white-space:nowrap;
-        padding:13px 12px;
-        font-size:11px;
-      }
-
-      .hero{
-        padding:40px 15px 35px;
-      }
-
-      .hero h1{
-        font-size:25px;
-      }
-
-      .hero p{
-        font-size:13px;
-        line-height:1.6;
-      }
-
-      .search-box input{
-        padding:15px;
-        font-size:13px;
-      }
-
-      .search-box button{
-        padding:0 16px;
-        font-size:12px;
-      }
-
-      .container{
-        width:94%;
-        margin:28px auto;
-      }
-
-      .section-title{
-        font-size:22px;
-      }
-
-      .quick-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-      }
-
-      .quick-box{
-        min-height:115px;
-        font-size:14px;
-      }
-
-      .content-grid{
-        grid-template-columns:1fr;
-        gap:16px;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-      }
-
-      .footer-brand{
-        justify-content:center;
-      }
-
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ResultSathi - Sarkari Jobs, Results & Updates</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+}
+a{text-decoration:none;color:inherit}
+
+/* TOP */
+.top-strip{
+  background:#0b2f63;
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:13px;
+}
+
+/* HEADER */
+.header{
+  max-width:1180px;
+  margin:auto;
+  min-height:105px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  padding:18px 20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-svg{
+  width:66px;
+  height:66px;
+  flex-shrink:0;
+}
+
+.logo-title{
+  font-size:31px;
+  font-weight:800;
+  color:#103d7a;
+  letter-spacing:-1px;
+}
+
+.logo-title span{color:#168652}
+
+.logo-tagline{
+  margin-top:5px;
+  font-size:13px;
+  color:#64748b;
+}
+
+.ad-box{
+  width:300px;
+  height:70px;
+  border:2px dashed #cbd5e1;
+  border-radius:7px;
+  background:#fafafa;
+  color:#64748b;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+}
+
+/* NAV */
+.nav-wrap{
+  background:#092e68;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  color:#fff;
+  padding:16px 18px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.nav a:hover{background:#174b91}
+
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:320px;
+  text-align:center;
+  padding:60px 20px 95px;
+  background:linear-gradient(135deg,#eef6ff 0%,#fff 55%,#e9f2ff 100%);
+}
+
+.hero:before,
+.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.hero:before{
+  width:520px;
+  height:520px;
+  left:-270px;
+  bottom:-360px;
+  background:rgba(29,78,216,.07);
+}
+
+.hero:after{
+  width:550px;
+  height:260px;
+  right:-100px;
+  bottom:-170px;
+  background:#0e5fb3;
+  opacity:.08;
+}
+
+.hero h1{
+  position:relative;
+  z-index:1;
+  color:#123d78;
+  font-size:38px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  position:relative;
+  z-index:1;
+  color:#64748b;
+  font-size:16px;
+  margin-bottom:28px;
+}
+
+.search{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+  height:58px;
+  margin:auto;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  display:flex;
+  box-shadow:0 10px 30px rgba(15,23,42,.14);
+}
+
+.search input{
+  flex:1;
+  border:0;
+  outline:0;
+  padding:0 20px;
+  font-size:15px;
+  color:#334155;
+}
+
+.search button{
+  border:0;
+  background:#0d4f9b;
+  color:#fff;
+  padding:0 30px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* MAIN */
+.container{
+  max-width:1180px;
+  margin:0 auto;
+  padding:35px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:26px;
+  color:#123d78;
+  margin-bottom:22px;
+}
+
+/* QUICK BOXES */
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:15px;
+  margin-bottom:38px;
+}
+
+.quick{
+  min-height:125px;
+  border-radius:10px;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+  box-shadow:0 5px 15px rgba(0,0,0,.13);
+  transition:.2s;
+}
+
+.quick:hover{transform:translateY(-4px)}
+
+.quick .icon{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  background:rgba(255,255,255,.18);
+}
+
+.q1{background:linear-gradient(135deg,#0b4389,#1c6bc6)}
+.q2{background:linear-gradient(135deg,#0c7a46,#22a968)}
+.q3{background:linear-gradient(135deg,#d63226,#ef6352)}
+.q4{background:linear-gradient(135deg,#d76605,#f69b20)}
+.q5{background:linear-gradient(135deg,#5b259e,#8b55cc)}
+.q6{background:linear-gradient(135deg,#087778,#18a4a5)}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #e6ebf2;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(15,23,42,.07);
+}
+
+.card-head{
+  background:#f8fafc;
+  border-bottom:1px solid #e7edf4;
+  padding:15px 17px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.card-head h2{
+  font-size:20px;
+  color:#123d78;
+}
+
+.card-head a{
+  font-size:12px;
+  color:#0f5db5;
+  font-weight:bold;
+}
+
+.list{
+  list-style:none;
+  padding:0 17px;
+}
+
+.list li{
+  padding:14px 0;
+  border-bottom:1px solid #edf1f5;
+  font-size:14px;
+  line-height:1.45;
+}
+
+.list li:last-child{border-bottom:0}
+
+.new{
+  background:#e53935;
+  color:#fff;
+  font-size:9px;
+  padding:3px 6px;
+  border-radius:3px;
+  font-weight:bold;
+  margin-right:5px;
+}
+
+.sub{
+  display:block;
+  margin-left:40px;
+  margin-top:4px;
+  color:#94a3b8;
+  font-size:11px;
+}
+
+.card-btn{
+  display:block;
+  margin:14px 17px 18px;
+  padding:11px;
+  text-align:center;
+  background:#123d78;
+  color:#fff;
+  border-radius:6px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+/* AD */
+.big-ad{
+  margin:35px 0 5px;
+  min-height:110px;
+  border:2px dashed #cbd5e1;
+  border-radius:9px;
+  background:#fff;
+  color:#94a3b8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.6;
+  font-size:13px;
+}
+
+/* FOOTER */
+footer{
+  margin-top:35px;
+  background:#061f46;
+  color:#fff;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:45px 20px 25px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:30px;
+}
+
+.footer-brand{
+  font-size:24px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.footer-brand span{color:#3eb577}
+
+.footer-text{
+  color:#c5d0df;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.footer-col h3{
+  font-size:16px;
+  margin-bottom:14px;
+}
+
+.footer-col ul{
+  list-style:none;
+}
+
+.footer-col li{
+  color:#c5d0df;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.copyright{
+  max-width:1180px;
+  margin:auto;
+  padding:18px 20px;
+  border-top:1px solid #28466e;
+  text-align:center;
+  color:#9db0c9;
+  font-size:13px;
+}
+
+/* TABLET */
+@media(max-width:1000px){
+  .quick-grid{grid-template-columns:repeat(3,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:repeat(2,1fr)}
+}
+
+/* MOBILE */
+@media(max-width:650px){
+  .top-strip{font-size:11px}
+
+  .header{
+    justify-content:center;
+    text-align:center;
+    padding:16px;
+  }
+
+  .brand{
+    justify-content:center;
+  }
+
+  .logo-svg{
+    width:55px;
+    height:55px;
+  }
+
+  .logo-title{font-size:25px}
+  .logo-tagline{font-size:11px}
+
+  .ad-box{
+    width:100%;
+    height:60px;
+  }
+
+  .nav{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+  }
+
+  .nav a{
+    white-space:nowrap;
+    font-size:11px;
+    padding:13px 12px;
+  }
+
+  .hero{
+    min-height:280px;
+    padding:45px 15px 75px;
+  }
+
+  .hero h1{font-size:26px}
+  .hero p{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .search{height:52px}
+  .search input{
+    padding:0 12px;
+    font-size:12px;
+  }
+
+  .search button{
+    padding:0 15px;
+    font-size:12px;
+  }
+
+  .container{
+    padding:28px 12px;
+  }
+
+  .section-title{
+    font-size:22px;
+  }
+
+  .quick-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .quick{
+    min-height:112px;
+    font-size:13px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    🔥 Welcome to ResultSathi - Sarkari Jobs, Results & Latest Updates
+<div class="top-strip">
+  🔥 Welcome to ResultSathi - Your Trusted Source for Sarkari Jobs & Results
+</div>
+
+<header class="header">
+
+  <div class="brand">
+
+    <div class="logo-svg">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Book -->
+        <path d="M14 39c13-7 25-7 36 1v40c-11-6-23-6-36 0z"
+              fill="#0a478f"/>
+
+        <path d="M86 39c-13-7-25-7-36 1v40c11-6 23-6 36 0z"
+              fill="#1976d2"/>
+
+        <!-- Graduation Cap -->
+        <path d="M50 15L90 34 50 53 10 34z"
+              fill="#0b3d82"/>
+
+        <path d="M78 39v24"
+              stroke="#0b3d82"
+              stroke-width="4"
+              stroke-linecap="round"/>
+
+        <circle cx="78" cy="67" r="4"
+                fill="#f3b705"/>
+
+        <!-- Book lines -->
+        <path d="M26 55h16M26 64h16M58 55h16M58 64h16"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"/>
+
+      </svg>
+    </div>
+
+    <div>
+      <div class="logo-title">RESULT<span>SATHI</span></div>
+      <div class="logo-tagline">
+        Sarkari Jobs • Results • Updates
+      </div>
+    </div>
+
   </div>
 
-  <header class="header">
+  <div class="ad-box">
+    <strong>ADVERTISEMENT</strong>
+    <span>Your Ad Here</span>
+  </div>
 
-    <div class="brand">
+</header>
 
-      <div class="logo-icon">
-
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-          <path d="M12 30c14-8 27-8 38 1v49c-12-7-25-7-38 0z" fill="#0a3d82"/>
-
-          <path d="M88 30c-14-8-27-8-38 1v49c12-7 25-7 38 0z" fill="#1976d2"/>
-
-          <path d="M50 16l37 18-37 18-37-18z" fill="#0b4f9c"/>
-
-          <path d="M82 34v27" stroke="#0a3d82" stroke-width="4" stroke-linecap="round"/>
-
-          <circle cx="82" cy="65" r="4" fill="#f2b705"/>
-
-          <path d="M36 50h28" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-
-          <path d="M36 60h20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-
-        </svg>
-
-      </div>
-
-      <div>
-        <div class="logo">RESULT<span>SATHI</span></div>
-
-        <div class="tagline">
-          Sarkari Jobs, Results & Latest Updates
-        </div>
-      </div>
-
-    </div>
-
-    <div class="header-ad">
-      <div>
-        <strong>Advertisement</strong><br>
-        Your Ad Here
-      </div>
-    </div>
-
-  </header>
-
+<div class="nav-wrap">
   <nav class="nav">
     <a href="#home">HOME</a>
     <a href="#jobs">LATEST JOBS</a>
@@ -604,385 +557,346 @@
     <a href="#answer">ANSWER KEY</a>
     <a href="#syllabus">SYLLABUS</a>
   </nav>
-
-  <section class="hero" id="home">
-
-    <h1>Find Sarkari Jobs, Results & More</h1>
-
-    <p>
-      Get Latest Updates on Government Jobs, Results,
-      Admit Cards, Online Forms, Answer Keys and Syllabus.
-    </p>
-
-    <div class="search-box">
-      <input type="text" placeholder="Search Jobs, Results, Admit Card...">
-
-      <button>SEARCH</button>
-    </div>
-
-  </section>
-
-  <main class="container">
-
-    <h2 class="section-title">Quick Updates</h2>
-
-    <div class="quick-grid">
-
-      <a href="#jobs" class="quick-box job-box">
-        <div class="quick-icon">💼</div>
-        Latest Jobs
-      </a>
-
-      <a href="#results" class="quick-box result-box">
-        <div class="quick-icon">🎓</div>
-        Results
-      </a>
-
-      <a href="#admit" class="quick-box admit-box">
-        <div class="quick-icon">🎫</div>
-        Admit Card
-      </a>
-
-      <a href="#forms" class="quick-box form-box">
-        <div class="quick-icon">📝</div>
-        Online Forms
-      </a>
-
-      <a href="#answer" class="quick-box answer-box">
-        <div class="quick-icon">🔑</div>
-        Answer Key
-      </a>
-
-      <a href="#syllabus" class="quick-box syllabus-box">
-        <div class="quick-icon">📚</div>
-        Syllabus
-      </a>
-
-    </div>
-
-    <div class="content-grid">
-
-      <!-- LATEST JOBS -->
-
-      <section class="card" id="jobs">
-
-        <div class="card-head">
-          <h2>Latest Jobs</h2>
-          <a href="#">View All</a>
-        </div>
-
-        <ul class="updates">
-
-          <li>
-            <span class="badge">NEW</span>
-            Latest Government Job Recruitment
-            <span class="update-date">Apply Online</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Bihar Government Vacancy
-            <span class="update-date">Check Notification</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            SSC Latest Recruitment
-            <span class="update-date">Apply Online</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Railway New Vacancy
-            <span class="update-date">Apply Online</span>
-          </li>
-
-        </ul>
-
-        <a href="#" class="card-btn">View All Jobs</a>
-
-      </section>
-
-      <!-- RESULTS -->
-
-      <section class="card" id="results">
-
-        <div class="card-head">
-          <h2>Latest Results</h2>
-          <a href="#">View All</a>
-        </div>
-
-        <ul class="updates">
-
-          <li>
-            <span class="badge">NEW</span>
-            Latest Exam Result
-            <span class="update-date">Check Result</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Bihar Board Result
-            <span class="update-date">Check Result</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            SSC Examination Result
-            <span class="update-date">Check Result</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Railway Recruitment Result
-            <span class="update-date">Check Result</span>
-          </li>
-
-        </ul>
-
-        <a href="#" class="card-btn">View All Results</a>
-
-      </section>
-
-      <!-- ADMIT CARD -->
-
-      <section class="card" id="admit">
-
-        <div class="card-head">
-          <h2>Admit Card</h2>
-          <a href="#">View All</a>
-        </div>
-
-        <ul class="updates">
-
-          <li>
-            <span class="badge">NEW</span>
-            Latest Exam Admit Card
-            <span class="update-date">Download Now</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Railway Admit Card
-            <span class="update-date">Download Now</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Bihar Police Admit Card
-            <span class="update-date">Download Now</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            SSC Admit Card
-            <span class="update-date">Download Now</span>
-          </li>
-
-        </ul>
-
-        <a href="#" class="card-btn">View All Admit Cards</a>
-
-      </section>
-
-      <!-- ONLINE FORMS -->
-
-      <section class="card" id="forms">
-
-        <div class="card-head">
-          <h2>Online Forms</h2>
-          <a href="#">View All</a>
-        </div>
-
-        <ul class="updates">
-
-          <li>
-            <span class="badge">NEW</span>
-            Latest Online Form
-            <span class="update-date">Apply Online</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            SSC Online Form
-            <span class="update-date">Apply Online</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Railway Online Application
-            <span class="update-date">Apply Online</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Bihar Government Form
-            <span class="update-date">Apply Online</span>
-          </li>
-
-        </ul>
-
-        <a href="#" class="card-btn">View All Forms</a>
-
-      </section>
-
-      <!-- ANSWER KEY -->
-
-      <section class="card" id="answer">
-
-        <div class="card-head">
-          <h2>Answer Key</h2>
-          <a href="#">View All</a>
-        </div>
-
-        <ul class="updates">
-
-          <li>
-            <span class="badge">NEW</span>
-            Latest Answer Key
-            <span class="update-date">Download Now</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            SSC Answer Key
-            <span class="update-date">Check Now</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Railway Answer Key
-            <span class="update-date">Check Now</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Other Exam Answer Key
-            <span class="update-date">Check Now</span>
-          </li>
-
-        </ul>
-
-        <a href="#" class="card-btn">View All Answer Keys</a>
-
-      </section>
-
-      <!-- SYLLABUS -->
-
-      <section class="card" id="syllabus">
-
-        <div class="card-head">
-          <h2>Syllabus</h2>
-          <a href="#">View All</a>
-        </div>
-
-        <ul class="updates">
-
-          <li>
-            <span class="badge">NEW</span>
-            Latest Exam Syllabus
-            <span class="update-date">View Details</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            SSC Syllabus
-            <span class="update-date">View Syllabus</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Railway Syllabus
-            <span class="update-date">View Syllabus</span>
-          </li>
-
-          <li>
-            <span class="badge">NEW</span>
-            Bihar Exam Syllabus
-            <span class="update-date">View Syllabus</span>
-          </li>
-
-        </ul>
-
-        <a href="#" class="card-btn">View All Syllabus</a>
-
-      </section>
-
-    </div>
-
-    <div class="ad-area">
-      <div>
-        <strong>Advertisement Area</strong><br><br>
-        Google AdSense ad will appear here after approval.
-      </div>
-    </div>
-
-  </main>
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div>
-
-        <div class="footer-brand">
-          <strong>RESULT<span>SATHI</span></strong>
-        </div>
-
-        <p>
-          ResultSathi provides latest information about Sarkari Jobs,
-          Sarkari Results, Admit Cards, Online Forms, Answer Keys
-          and Government Exam Syllabus.
-        </p>
-
+</div>
+
+<section class="hero" id="home">
+  <h1>Find Sarkari Jobs, Results & More</h1>
+
+  <p>
+    Get Latest Updates on Jobs, Results, Admit Cards,
+    Online Forms, Answer Keys & Syllabus
+  </p>
+
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Search Jobs, Results, Admit Card..."
+    >
+
+    <button>SEARCH</button>
+  </div>
+</section>
+
+<main class="container">
+
+  <h2 class="section-title">Quick Updates</h2>
+
+  <div class="quick-grid">
+
+    <a href="#jobs" class="quick q1">
+      <div class="icon">💼</div>
+      Latest Jobs
+    </a>
+
+    <a href="#results" class="quick q2">
+      <div class="icon">🎓</div>
+      Results
+    </a>
+
+    <a href="#admit" class="quick q3">
+      <div class="icon">🎫</div>
+      Admit Card
+    </a>
+
+    <a href="#forms" class="quick q4">
+      <div class="icon">📝</div>
+      Online Forms
+    </a>
+
+    <a href="#answer" class="quick q5">
+      <div class="icon">🔑</div>
+      Answer Key
+    </a>
+
+    <a href="#syllabus" class="quick q6">
+      <div class="icon">📚</div>
+      Syllabus
+    </a>
+
+  </div>
+
+  <div class="cards">
+
+    <!-- JOBS -->
+    <section class="card" id="jobs">
+      <div class="card-head">
+        <h2>Latest Jobs</h2>
+        <a href="#">View All →</a>
       </div>
 
-      <div>
+      <ul class="list">
+        <li>
+          <span class="new">NEW</span>
+          Latest Government Job Recruitment
+          <span class="sub">Apply Online</span>
+        </li>
 
-        <h3>Quick Links</h3>
+        <li>
+          <span class="new">NEW</span>
+          Bihar Government Vacancy
+          <span class="sub">Check Notification</span>
+        </li>
 
-        <ul>
-          <li>Latest Jobs</li>
-          <li>Latest Results</li>
-          <li>Admit Card</li>
-          <li>Online Forms</li>
-        </ul>
+        <li>
+          <span class="new">NEW</span>
+          SSC Latest Recruitment
+          <span class="sub">Apply Online</span>
+        </li>
 
+        <li>
+          <span class="new">NEW</span>
+          Railway New Vacancy
+          <span class="sub">Apply Online</span>
+        </li>
+      </ul>
+
+      <a href="#" class="card-btn">View All Jobs</a>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="card" id="results">
+      <div class="card-head">
+        <h2>Latest Results</h2>
+        <a href="#">View All →</a>
       </div>
 
-      <div>
+      <ul class="list">
+        <li>
+          <span class="new">NEW</span>
+          Latest Exam Result
+          <span class="sub">Check Result</span>
+        </li>
 
-        <h3>Important Links</h3>
+        <li>
+          <span class="new">NEW</span>
+          Bihar Board Result
+          <span class="sub">Check Result</span>
+        </li>
 
-        <ul>
-          <li>Answer Key</li>
-          <li>Syllabus</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-        </ul>
+        <li>
+          <span class="new">NEW</span>
+          SSC Examination Result
+          <span class="sub">Check Result</span>
+        </li>
 
+        <li>
+          <span class="new">NEW</span>
+          Railway Recruitment Result
+          <span class="sub">Check Result</span>
+        </li>
+      </ul>
+
+      <a href="#" class="card-btn">View All Results</a>
+    </section>
+
+    <!-- ADMIT CARD -->
+    <section class="card" id="admit">
+      <div class="card-head">
+        <h2>Admit Card</h2>
+        <a href="#">View All →</a>
       </div>
 
-      <div>
+      <ul class="list">
+        <li>
+          <span class="new">NEW</span>
+          Latest Exam Admit Card
+          <span class="sub">Download Now</span>
+        </li>
 
-        <h3>Legal</h3>
+        <li>
+          <span class="new">NEW</span>
+          Railway Admit Card
+          <span class="sub">Download Now</span>
+        </li>
 
-        <ul>
-          <li>Privacy Policy</li>
-          <li>Disclaimer</li>
-          <li>Terms & Conditions</li>
-          <li>Copyright Policy</li>
-        </ul>
+        <li>
+          <span class="new">NEW</span>
+          Bihar Police Admit Card
+          <span class="sub">Download Now</span>
+        </li>
 
+        <li>
+          <span class="new">NEW</span>
+          SSC Admit Card
+          <span class="sub">Download Now</span>
+        </li>
+      </ul>
+
+      <a href="#" class="card-btn">View All Admit Cards</a>
+    </section>
+
+    <!-- ONLINE FORM -->
+    <section class="card" id="forms">
+      <div class="card-head">
+        <h2>Online Forms</h2>
+        <a href="#">View All →</a>
       </div>
 
+      <ul class="list">
+        <li>
+          <span class="new">NEW</span>
+          Latest Online Form
+          <span class="sub">Apply Online</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          SSC Online Form
+          <span class="sub">Apply Online</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          Railway Online Application
+          <span class="sub">Apply Online</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          Bihar Government Form
+          <span class="sub">Apply Online</span>
+        </li>
+      </ul>
+
+      <a href="#" class="card-btn">View All Forms</a>
+    </section>
+
+    <!-- ANSWER KEY -->
+    <section class="card" id="answer">
+      <div class="card-head">
+        <h2>Answer Key</h2>
+        <a href="#">View All →</a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <span class="new">NEW</span>
+          Latest Answer Key
+          <span class="sub">Download Now</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          SSC Answer Key
+          <span class="sub">Check Now</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          Railway Answer Key
+          <span class="sub">Check Now</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          Other Exam Answer Key
+          <span class="sub">Check Now</span>
+        </li>
+      </ul>
+
+      <a href="#" class="card-btn">View All Answer Keys</a>
+    </section>
+
+    <!-- SYLLABUS -->
+    <section class="card" id="syllabus">
+      <div class="card-head">
+        <h2>Syllabus</h2>
+        <a href="#">View All →</a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <span class="new">NEW</span>
+          Latest Exam Syllabus
+          <span class="sub">View Details</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          SSC Syllabus
+          <span class="sub">View Syllabus</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          Railway Syllabus
+          <span class="sub">View Syllabus</span>
+        </li>
+
+        <li>
+          <span class="new">NEW</span>
+          Bihar Exam Syllabus
+          <span class="sub">View Syllabus</span>
+        </li>
+      </ul>
+
+      <a href="#" class="card-btn">View All Syllabus</a>
+    </section>
+
+  </div>
+
+  <div class="big-ad">
+    <div>
+      <strong>ADVERTISEMENT</strong><br>
+      Your Ad Here
+    </div>
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <div class="footer-brand">
+        RESULT<span>SATHI</span>
+      </div>
+
+      <p class="footer-text">
+        ResultSathi is your trusted source for Sarkari Jobs,
+        Sarkari Results, Admit Cards, Online Forms,
+        Answer Keys and Government Exam Syllabus.
+      </p>
     </div>
 
-    <div class="footer-bottom">
-      © 2026 ResultSathi. All Rights Reserved.
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Latest Jobs</li>
+        <li>Results</li>
+        <li>Admit Card</li>
+        <li>Online Forms</li>
+      </ul>
     </div>
 
-  </footer>
+    <div class="footer-col">
+      <h3>Information</h3>
+      <ul>
+        <li>Answer Key</li>
+        <li>Syllabus</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li>Privacy Policy</li>
+        <li>Disclaimer</li>
+        <li>Terms & Conditions</li>
+        <li>Copyright Policy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 ResultSathi. All Rights Reserved.
+  </div>
+
+</footer>
 
 </body>
 </html>
