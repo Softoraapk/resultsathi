@@ -1,1 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Latest Government Recruitment 2026 - ResultSathi</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* TOP BAR */
+.top-strip{
+  background:#0b2f63;
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:13px;
+}
+
+/* HEADER */
+.header{
+  max-width:1180px;
+  margin:auto;
+  min-height:105px;
+  padding:18px 20px;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-svg{
+  width:66px;
+  height:66px;
+  flex-shrink:0;
+}
+
+.logo-title{
+  font-size:31px;
+  font-weight:800;
+  color:#103d7a;
+  letter-spacing:-1px;
+}
+
+.logo-title span{
+  color:#168652;
+}
+
+.logo-tagline{
+  margin-top:5px;
+  font-size:13px;
+  color:#64748b;
+}
+
+.ad-box{
+  width:300px;
+  height:70px;
+  border:2px dashed #cbd5e1;
+  border-radius:7px;
+  color:#64748b;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:13px;
+}
+
+/* NAV */
+.nav-wrap{
+  background:#092e68;
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  color:#fff;
+  padding:16px 18px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.nav a:hover{
+  background:#174b91;
+}
+
+/* MAIN */
+.container{
+  max-width:1050px;
+  margin:auto;
+  padding:30px 20px 45px;
+}
+
+.breadcrumb{
+  font-size:13px;
+  color:#64748b;
+  margin-bottom:18px;
+}
+
+.breadcrumb a{
+  color:#0f5db5;
+}
+
+/* ARTICLE */
+.article{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 5px 20px rgba(15,23,42,.06);
+}
+
+.article h1{
+  color:#123d78;
+  font-size:30px;
+  line-height:1.35;
+  margin-bottom:14px;
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  padding-bottom:18px;
+  border-bottom:1px solid #e5e7eb;
+  color:#64748b;
+  font-size:13px;
+}
+
+.intro{
+  margin:22px 0;
+  color:#475569;
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* NOTICE BOX */
+.notice{
+  background:#fff8e7;
+  border-left:5px solid #f59e0b;
+  padding:16px;
+  border-radius:5px;
+  margin:22px 0;
+  color:#6b4f14;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* SECTION */
+.section{
+  margin-top:28px;
+}
+
+.section h2{
+  background:#123d78;
+  color:#fff;
+  padding:13px 16px;
+  font-size:19px;
+  border-radius:7px 7px 0 0;
+}
+
+/* INFO TABLE */
+.info-table{
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid #dbe3ee;
+}
+
+.info-table th,
+.info-table td{
+  border:1px solid #dbe3ee;
+  padding:13px;
+  text-align:left;
+  font-size:14px;
+}
+
+.info-table th{
+  width:35%;
+  background:#f5f8fc;
+  color:#123d78;
+}
+
+.info-table td{
+  color:#475569;
+}
+
+/* VACANCY TABLE */
+.vacancy-table{
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid #dbe3ee;
+}
+
+.vacancy-table th,
+.vacancy-table td{
+  border:1px solid #dbe3ee;
+  padding:13px;
+  text-align:left;
+  font-size:14px;
+}
+
+.vacancy-table th{
+  background:#edf4fc;
+  color:#123d78;
+}
+
+.vacancy-table td{
+  color:#475569;
+}
+
+/* LIST */
+.details-list{
+  padding:18px 20px 10px 38px;
+  border:1px solid #e1e7ef;
+  border-top:0;
+  line-height:1.9;
+  color:#475569;
+  font-size:14px;
+}
+
+/* BUTTONS */
+.link-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  padding:18px;
+  border:1px solid #e1e7ef;
+  border-top:0;
+}
+
+.apply-btn,
+.notification-btn,
+.official-btn,
+.home-btn{
+  display:block;
+  text-align:center;
+  padding:14px;
+  border-radius:7px;
+  color:#fff;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.apply-btn{
+  background:#168652;
+}
+
+.notification-btn{
+  background:#e67e22;
+}
+
+.official-btn{
+  background:#123d78;
+}
+
+.home-btn{
+  background:#64748b;
+}
+
+/* AD */
+.ad-area{
+  margin:25px 0;
+  min-height:110px;
+  background:#fff;
+  border:2px dashed #cbd5e1;
+  border-radius:9px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#94a3b8;
+  font-size:13px;
+}
+
+/* FOOTER */
+footer{
+  background:#061f46;
+  color:#fff;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:35px 20px;
+  text-align:center;
+}
+
+.footer-brand{
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.footer-brand span{
+  color:#3eb577;
+}
+
+.footer-text{
+  color:#c5d0df;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.copyright{
+  border-top:1px solid #28466e;
+  padding:18px;
+  text-align:center;
+  color:#9db0c9;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:650px){
+
+  .header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .brand{
+    justify-content:center;
+  }
+
+  .logo-svg{
+    width:55px;
+    height:55px;
+  }
+
+  .logo-title{
+    font-size:25px;
+  }
+
+  .logo-tagline{
+    font-size:11px;
+  }
+
+  .ad-box{
+    width:100%;
+    height:60px;
+  }
+
+  .nav{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+  }
+
+  .nav a{
+    white-space:nowrap;
+    padding:13px 12px;
+    font-size:11px;
+  }
+
+  .container{
+    padding:20px 10px 35px;
+  }
+
+  .article{
+    padding:17px;
+  }
+
+  .article h1{
+    font-size:23px;
+  }
+
+  .info-table th{
+    width:42%;
+  }
+
+  .info-table th,
+  .info-table td,
+  .vacancy-table th,
+  .vacancy-table td{
+    padding:9px;
+    font-size:12px;
+  }
+
+  .section h2{
+    font-size:16px;
+  }
+
+  .link-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-strip">
+🔥 Welcome to ResultSathi - Your Trusted Source for Sarkari Jobs & Results
+</div>
+
+<header class="header">
+
+  <div class="brand">
+
+    <div class="logo-svg">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 39c13-7 25-7 36 1v40c-11-6-23-6-36 0z" fill="#0a478f"/>
+        <path d="M86 39c-13-7-25-7-36 1v40c11-6 23-6 36 0z" fill="#1976d2"/>
+        <path d="M50 15L90 34 50 53 10 34z" fill="#0b3d82"/>
+        <path d="M78 39v24" stroke="#0b3d82" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="78" cy="67" r="4" fill="#f3b705"/>
+        <path d="M26 55h16M26 64h16M58 55h16M58 64h16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div>
+      <div class="logo-title">RESULT<span>SATHI</span></div>
+      <div class="logo-tagline">Sarkari Jobs • Results • Updates</div>
+    </div>
+
+  </div>
+
+  <div class="ad-box">
+    <strong>ADVERTISEMENT</strong>
+    <span>Your Ad Here</span>
+  </div>
+
+</header>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html">HOME</a>
+    <a href="jobs.html">LATEST JOBS</a>
+    <a href="#">RESULT</a>
+    <a href="#">ADMIT CARD</a>
+    <a href="#">ONLINE FORM</a>
+    <a href="#">ANSWER KEY</a>
+    <a href="#">SYLLABUS</a>
+  </nav>
+</div>
+
+<main class="container">
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> ›
+    <a href="jobs.html">Latest Jobs</a> ›
+    Latest Government Recruitment 2026
+  </div>
+
+  <article class="article">
+
+    <h1>Latest Government Recruitment 2026 - Apply Online</h1>
+
+    <div class="meta">
+      <span>📅 Post Date: 21 August 2026</span>
+      <span>🔄 Last Updated: 21 August 2026</span>
+      <span>📂 Category: Latest Jobs</span>
+    </div>
+
+    <p class="intro">
+      ResultSathi provides complete information about the latest Government
+      Recruitment 2026. Candidates can check important dates, application fee,
+      age limit, eligibility criteria, vacancy details and important links below.
+    </p>
+
+    <div class="notice">
+      <strong>Important:</strong> This is currently a demo job-detail page for our
+      website structure. When we add real government recruitment posts, all dates,
+      eligibility and official links will be updated from the official notification.
+    </div>
+
+    <div class="section">
+      <h2>Important Dates</h2>
+
+      <table class="info-table">
+        <tr>
+          <th>Application Start</th>
+          <td>Update Soon</td>
+        </tr>
+        <tr>
+          <th>Last Date to Apply</th>
+          <td>Update Soon</td>
+        </tr>
+        <tr>
+          <th>Last Date for Fee Payment</th>
+          <td>Update Soon</td>
+        </tr>
+        <tr>
+          <th>Exam Date</th>
+          <td>Update Soon</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Application Fee</h2>
+
+      <table class="info-table">
+        <tr>
+          <th>General / OBC</th>
+          <td>As Per Official Notification</td>
+        </tr>
+        <tr>
+          <th>SC / ST</th>
+          <td>As Per Official Notification</td>
+        </tr>
+        <tr>
+          <th>Female Candidates</th>
+          <td>As Per Official Notification</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Age Limit</h2>
+
+      <table class="info-table">
+        <tr>
+          <th>Minimum Age</th>
+          <td>As Per Official Notification</td>
+        </tr>
+        <tr>
+          <th>Maximum Age</th>
+          <td>As Per Official Notification</td>
+        </tr>
+        <tr>
+          <th>Age Relaxation</th>
+          <td>Extra age relaxation as per government rules.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Vacancy Details</h2>
+
+      <table class="vacancy-table">
+        <tr>
+          <th>Post Name</th>
+          <th>Total Posts</th>
+          <th>Eligibility</th>
+        </tr>
+
+        <tr>
+          <td>Government Recruitment Post</td>
+          <td>As Per Notification</td>
+          <td>Check Official Notification</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>How to Apply</h2>
+
+      <ol class="details-list">
+        <li>Read the official notification carefully before applying.</li>
+        <li>Check eligibility criteria, age limit and required documents.</li>
+        <li>Fill the online application form with correct information.</li>
+        <li>Upload required documents, photograph and signature if required.</li>
+        <li>Pay the application fee if applicable.</li>
+        <li>Submit the application and take a printout for future reference.</li>
+      </ol>
+    </div>
+
+    <div class="ad-area">
+      <div>
+        <strong>ADVERTISEMENT</strong><br><br>
+        Your Ad Here
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Important Links</h2>
+
+      <div class="link-grid">
+        <a href="#" class="apply-btn">Apply Online</a>
+        <a href="#" class="notification-btn">Download Notification</a>
+        <a href="#" class="official-btn">Official Website</a>
+        <a href="jobs.html" class="home-btn">Back to Latest Jobs</a>
+      </div>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+
+  <div class="footer-inner">
+    <div class="footer-brand">RESULT<span>SATHI</span></div>
+
+    <p class="footer-text">
+      ResultSathi provides the latest updates about Sarkari Jobs,
+      Results, Admit Cards, Online Forms, Answer Keys and Syllabus.
+    </p>
+  </div>
+
+  <div class="copyright">
+    © 2026 ResultSathi. All Rights Reserved.
+  </div>
+
+</footer>
+
+</body>
+</html>
