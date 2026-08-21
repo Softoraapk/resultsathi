@@ -6,896 +6,1773 @@
 
 <title>ResultSathi - Sarkari Jobs, Results & Updates</title>
 
+<meta name="description" content="ResultSathi - Latest Sarkari Jobs, Results, Admit Card, Online Forms, Answer Key and Syllabus.">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#1f2937;
-}
-a{text-decoration:none;color:inherit}
-
-/* TOP */
-.top-strip{
-  background:#0b2f63;
-  color:#fff;
-  text-align:center;
-  padding:9px 15px;
-  font-size:13px;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f5f8;
+    color:#222;
+    line-height:1.5;
 }
 
-/* HEADER */
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    background:#0b3d82;
+    color:#fff;
+    padding:8px 15px;
+    text-align:center;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ================= HEADER ================= */
+
 .header{
-  max-width:1180px;
-  margin:auto;
-  min-height:105px;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-  padding:18px 20px;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:95px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:12px 15px;
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .logo-svg{
-  width:66px;
-  height:66px;
-  flex-shrink:0;
+    width:62px;
+    height:62px;
+}
+
+.logo-svg svg{
+    width:100%;
+    height:100%;
 }
 
 .logo-title{
-  font-size:31px;
-  font-weight:800;
-  color:#103d7a;
-  letter-spacing:-1px;
+    font-size:27px;
+    font-weight:900;
+    color:#0b3d82;
+    letter-spacing:.5px;
 }
 
-.logo-title span{color:#168652}
+.logo-title span{
+    color:#f39c12;
+}
 
 .logo-tagline{
-  margin-top:5px;
-  font-size:13px;
-  color:#64748b;
+    font-size:12px;
+    color:#666;
+    margin-top:2px;
 }
 
-.ad-box{
-  width:300px;
-  height:70px;
-  border:2px dashed #cbd5e1;
-  border-radius:7px;
-  background:#fafafa;
-  color:#64748b;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  font-size:13px;
+.header-ad{
+    width:320px;
+    height:70px;
+    background:#f5f5f5;
+    border:1px solid #ddd;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#777;
+    font-size:12px;
 }
 
-/* NAV */
-.nav-wrap{
-  background:#092e68;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
+.header-ad strong{
+    font-size:11px;
+    margin-bottom:3px;
 }
 
-.nav{
-  max-width:1180px;
-  margin:auto;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
+/* ================= NAVIGATION ================= */
+
+.navbar{
+    background:#092f68;
 }
 
-.nav a{
-  color:#fff;
-  padding:16px 18px;
-  font-size:13px;
-  font-weight:700;
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    overflow-x:auto;
+    scrollbar-width:none;
 }
 
-.nav a:hover{background:#174b91}
-
-/* HERO */
-.hero{
-  position:relative;
-  overflow:hidden;
-  min-height:320px;
-  text-align:center;
-  padding:60px 20px 95px;
-  background:linear-gradient(135deg,#eef6ff 0%,#fff 55%,#e9f2ff 100%);
+.nav-inner::-webkit-scrollbar{
+    display:none;
 }
 
-.hero:before,
-.hero:after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  pointer-events:none;
+.nav-inner a{
+    color:#fff;
+    padding:14px 16px;
+    font-size:14px;
+    font-weight:700;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.08);
+    transition:.2s;
 }
 
-.hero:before{
-  width:520px;
-  height:520px;
-  left:-270px;
-  bottom:-360px;
-  background:rgba(29,78,216,.07);
+.nav-inner a:hover{
+    background:#f39c12;
 }
 
-.hero:after{
-  width:550px;
-  height:260px;
-  right:-100px;
-  bottom:-170px;
-  background:#0e5fb3;
-  opacity:.08;
-}
+/* ================= CONTAINER ================= */
 
-.hero h1{
-  position:relative;
-  z-index:1;
-  color:#123d78;
-  font-size:38px;
-  margin-bottom:12px;
-}
-
-.hero p{
-  position:relative;
-  z-index:1;
-  color:#64748b;
-  font-size:16px;
-  margin-bottom:28px;
-}
-
-.search{
-  position:relative;
-  z-index:2;
-  max-width:720px;
-  height:58px;
-  margin:auto;
-  background:#fff;
-  border-radius:10px;
-  overflow:hidden;
-  display:flex;
-  box-shadow:0 10px 30px rgba(15,23,42,.14);
-}
-
-.search input{
-  flex:1;
-  border:0;
-  outline:0;
-  padding:0 20px;
-  font-size:15px;
-  color:#334155;
-}
-
-.search button{
-  border:0;
-  background:#0d4f9b;
-  color:#fff;
-  padding:0 30px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* MAIN */
 .container{
-  max-width:1180px;
-  margin:0 auto;
-  padding:35px 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:18px 15px 40px;
 }
+
+/* ================= SEARCH ================= */
+
+.search-area{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:18px;
+    margin-bottom:18px;
+    border-radius:5px;
+}
+
+.search-title{
+    text-align:center;
+    color:#0b3d82;
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.search-box{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+}
+
+.search-box input{
+    flex:1;
+    padding:13px 15px;
+    border:1px solid #ccc;
+    border-right:0;
+    outline:none;
+    font-size:14px;
+    border-radius:4px 0 0 4px;
+}
+
+.search-box button{
+    border:0;
+    background:#f39c12;
+    color:#fff;
+    padding:0 25px;
+    font-weight:700;
+    cursor:pointer;
+    border-radius:0 4px 4px 0;
+}
+
+/* ================= NOTICE ================= */
+
+.notice{
+    background:#fff;
+    border:1px solid #ddd;
+    display:flex;
+    align-items:center;
+    margin-bottom:18px;
+    overflow:hidden;
+    border-radius:4px;
+}
+
+.notice-title{
+    background:#d32f2f;
+    color:#fff;
+    padding:11px 16px;
+    font-weight:800;
+    white-space:nowrap;
+    font-size:14px;
+}
+
+.notice-text{
+    padding:10px 15px;
+    color:#333;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ================= QUICK LINKS ================= */
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:10px;
+    margin-bottom:22px;
+}
+
+.quick-box{
+    background:#fff;
+    border:1px solid #ddd;
+    min-height:95px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:10px;
+    font-weight:700;
+    color:#123;
+    transition:.2s;
+    border-radius:4px;
+}
+
+.quick-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.quick-icon{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+/* ================= SECTION TITLE ================= */
 
 .section-title{
-  text-align:center;
-  font-size:26px;
-  color:#123d78;
-  margin-bottom:22px;
+    background:#0b3d82;
+    color:#fff;
+    padding:11px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:0;
+    border-radius:4px 4px 0 0;
 }
 
-/* QUICK BOXES */
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:15px;
-  margin-bottom:38px;
+.section-title h2{
+    font-size:18px;
 }
 
-.quick{
-  min-height:125px;
-  border-radius:10px;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  text-align:center;
-  font-size:14px;
-  font-weight:bold;
-  box-shadow:0 5px 15px rgba(0,0,0,.13);
-  transition:.2s;
+.section-title a{
+    font-size:13px;
+    color:#fff;
+    background:#f39c12;
+    padding:5px 10px;
+    border-radius:3px;
 }
 
-.quick:hover{transform:translateY(-4px)}
+/* ================= MAIN GRID ================= */
 
-.quick .icon{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:23px;
-  background:rgba(255,255,255,.18);
+.main-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:22px;
 }
 
-.q1{background:linear-gradient(135deg,#0b4389,#1c6bc6)}
-.q2{background:linear-gradient(135deg,#0c7a46,#22a968)}
-.q3{background:linear-gradient(135deg,#d63226,#ef6352)}
-.q4{background:linear-gradient(135deg,#d76605,#f69b20)}
-.q5{background:linear-gradient(135deg,#5b259e,#8b55cc)}
-.q6{background:linear-gradient(135deg,#087778,#18a4a5)}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+.section-card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:4px;
+    overflow:hidden;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #e6ebf2;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 4px 15px rgba(15,23,42,.07);
+/* ================= LIST ================= */
+
+.item-list{
+    list-style:none;
 }
 
-.card-head{
-  background:#f8fafc;
-  border-bottom:1px solid #e7edf4;
-  padding:15px 17px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.item-list li{
+    border-bottom:1px solid #eee;
+    padding:13px 14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
 }
 
-.card-head h2{
-  font-size:20px;
-  color:#123d78;
+.item-list li:last-child{
+    border-bottom:0;
 }
 
-.card-head a{
-  font-size:12px;
-  color:#0f5db5;
-  font-weight:bold;
+.item-list li:hover{
+    background:#f8fafc;
 }
 
-.list{
-  list-style:none;
-  padding:0 17px;
+.item-list li a{
+    flex:1;
+    color:#333;
+    font-weight:600;
 }
 
-.list li{
-  padding:14px 0;
-  border-bottom:1px solid #edf1f5;
-  font-size:14px;
-  line-height:1.45;
+.item-list li a:hover{
+    color:#0b3d82;
 }
 
-.list li:last-child{border-bottom:0}
-
-.new{
-  background:#e53935;
-  color:#fff;
-  font-size:9px;
-  padding:3px 6px;
-  border-radius:3px;
-  font-weight:bold;
-  margin-right:5px;
+.badge-new{
+    background:#e53935;
+    color:#fff;
+    font-size:9px;
+    font-weight:bold;
+    padding:3px 5px;
+    border-radius:3px;
 }
 
-.sub{
-  display:block;
-  margin-left:40px;
-  margin-top:4px;
-  color:#94a3b8;
-  font-size:11px;
+.item-action{
+    color:#0b3d82;
+    font-size:11px;
+    font-weight:800;
+    white-space:nowrap;
 }
 
-.card-btn{
-  display:block;
-  margin:14px 17px 18px;
-  padding:11px;
-  text-align:center;
-  background:#123d78;
-  color:#fff;
-  border-radius:6px;
-  font-size:14px;
-  font-weight:bold;
+.section-footer{
+    padding:10px;
+    text-align:center;
+    border-top:1px solid #eee;
 }
 
-/* AD */
-.big-ad{
-  margin:35px 0 5px;
-  min-height:110px;
-  border:2px dashed #cbd5e1;
-  border-radius:9px;
-  background:#fff;
-  color:#94a3b8;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  line-height:1.6;
-  font-size:13px;
+.section-footer a{
+    color:#d35400;
+    font-size:13px;
+    font-weight:800;
 }
 
-/* FOOTER */
+/* ================= THREE COLUMN ================= */
+
+.three-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-bottom:22px;
+}
+
+/* ================= CATEGORY ================= */
+
+.category-section{
+    background:#fff;
+    border:1px solid #ddd;
+    margin-bottom:22px;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+}
+
+.category{
+    padding:15px;
+    border-right:1px solid #eee;
+    border-bottom:1px solid #eee;
+    text-align:center;
+    font-weight:700;
+    color:#333;
+}
+
+.category:hover{
+    background:#f5f8fc;
+    color:#0b3d82;
+}
+
+.category-icon{
+    display:block;
+    font-size:25px;
+    margin-bottom:5px;
+}
+
+/* ================= AD ================= */
+
+.content-ad{
+    height:100px;
+    background:#fff;
+    border:1px solid #ddd;
+    margin:20px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#888;
+    font-size:12px;
+}
+
+.content-ad strong{
+    margin-right:5px;
+}
+
+/* ================= NEWS ================= */
+
+.news-section{
+    background:#fff;
+    border:1px solid #ddd;
+    margin-bottom:22px;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.news-list{
+    list-style:none;
+}
+
+.news-list li{
+    padding:13px 15px;
+    border-bottom:1px solid #eee;
+    display:flex;
+    gap:10px;
+}
+
+.news-list li:last-child{
+    border-bottom:0;
+}
+
+.news-date{
+    color:#e67e22;
+    font-size:12px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.news-list a{
+    font-weight:600;
+    font-size:14px;
+}
+
+/* ================= TOOLS ================= */
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    padding:15px;
+}
+
+.tool{
+    background:#f7f9fc;
+    border:1px solid #e1e5ea;
+    padding:16px 10px;
+    text-align:center;
+    border-radius:4px;
+    font-weight:700;
+    font-size:13px;
+}
+
+.tool-icon{
+    font-size:26px;
+    display:block;
+    margin-bottom:6px;
+}
+
+/* ================= INFO ================= */
+
+.info-box{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:20px;
+    margin-bottom:22px;
+    border-radius:4px;
+}
+
+.info-box h2{
+    color:#0b3d82;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#555;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
-  margin-top:35px;
-  background:#061f46;
-  color:#fff;
+    background:#082d61;
+    color:#fff;
 }
 
 .footer-inner{
-  max-width:1180px;
-  margin:auto;
-  padding:45px 20px 25px;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:30px;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 15px 30px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:30px;
 }
 
 .footer-brand{
-  font-size:24px;
-  font-weight:800;
-  margin-bottom:12px;
+    font-size:24px;
+    font-weight:900;
 }
 
-.footer-brand span{color:#3eb577}
+.footer-brand span{
+    color:#f39c12;
+}
 
 .footer-text{
-  color:#c5d0df;
-  font-size:14px;
-  line-height:1.7;
+    margin-top:10px;
+    color:#d9e2ef;
+    font-size:13px;
+    line-height:1.7;
 }
 
 .footer-col h3{
-  font-size:16px;
-  margin-bottom:14px;
+    font-size:16px;
+    margin-bottom:12px;
 }
 
 .footer-col ul{
-  list-style:none;
+    list-style:none;
 }
 
 .footer-col li{
-  color:#c5d0df;
-  font-size:14px;
-  margin-bottom:10px;
+    margin-bottom:8px;
+    color:#d9e2ef;
+    font-size:13px;
+}
+
+.footer-col li:hover{
+    color:#f39c12;
 }
 
 .copyright{
-  max-width:1180px;
-  margin:auto;
-  padding:18px 20px;
-  border-top:1px solid #28466e;
-  text-align:center;
-  color:#9db0c9;
-  font-size:13px;
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+    padding:15px;
+    color:#ccd7e5;
+    font-size:12px;
 }
 
-/* TABLET */
-@media(max-width:1000px){
-  .quick-grid{grid-template-columns:repeat(3,1fr)}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .footer-inner{grid-template-columns:repeat(2,1fr)}
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .quick-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .three-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
-/* MOBILE */
 @media(max-width:650px){
-  .top-strip{font-size:11px}
 
-  .header{
-    justify-content:center;
-    text-align:center;
-    padding:16px;
-  }
+    .header-inner{
+        min-height:auto;
+    }
 
-  .brand{
-    justify-content:center;
-  }
+    .header-ad{
+        display:none;
+    }
 
-  .logo-svg{
-    width:55px;
-    height:55px;
-  }
+    .logo-title{
+        font-size:22px;
+    }
 
-  .logo-title{font-size:25px}
-  .logo-tagline{font-size:11px}
+    .logo-svg{
+        width:52px;
+        height:52px;
+    }
 
-  .ad-box{
-    width:100%;
-    height:60px;
-  }
+    .nav-inner a{
+        padding:12px 13px;
+        font-size:12px;
+    }
 
-  .nav{
-    justify-content:flex-start;
-    flex-wrap:nowrap;
-    overflow-x:auto;
-  }
+    .container{
+        padding:12px 10px 30px;
+    }
 
-  .nav a{
-    white-space:nowrap;
-    font-size:11px;
-    padding:13px 12px;
-  }
+    .search-title{
+        font-size:19px;
+    }
 
-  .hero{
-    min-height:280px;
-    padding:45px 15px 75px;
-  }
+    .search-box input{
+        min-width:0;
+    }
 
-  .hero h1{font-size:26px}
-  .hero p{
-    font-size:13px;
-    line-height:1.6;
-  }
+    .notice-title{
+        padding:10px;
+        font-size:12px;
+    }
 
-  .search{height:52px}
-  .search input{
-    padding:0 12px;
-    font-size:12px;
-  }
+    .notice-text{
+        font-size:12px;
+        padding:9px;
+    }
 
-  .search button{
-    padding:0 15px;
-    font-size:12px;
-  }
+    .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
 
-  .container{
-    padding:28px 12px;
-  }
+    .quick-box{
+        min-height:85px;
+        font-size:13px;
+    }
 
-  .section-title{
-    font-size:22px;
-  }
+    .main-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
 
-  .quick-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
+    .section-title h2{
+        font-size:16px;
+    }
 
-  .quick{
-    min-height:112px;
-    font-size:13px;
-  }
+    .item-list li{
+        font-size:13px;
+        padding:12px 10px;
+    }
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .footer-inner{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+    .category{
+        font-size:12px;
+        padding:13px 5px;
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+        padding:10px;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+        padding:30px 15px;
+        gap:22px;
+    }
+
+    .news-list li{
+        flex-direction:column;
+        gap:3px;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="top-strip">
-  🔥 Welcome to ResultSathi - Your Trusted Source for Sarkari Jobs & Results
+<!-- ================= TOP BAR ================= -->
+
+<div class="topbar">
+🔥 Welcome to ResultSathi - Your Trusted Source for Sarkari Jobs & Results
 </div>
+
+
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
-  <div class="brand">
+<div class="header-inner">
 
-    <div class="logo-svg">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <div class="brand">
 
-        <!-- Book -->
-        <path d="M14 39c13-7 25-7 36 1v40c-11-6-23-6-36 0z"
-              fill="#0a478f"/>
+        <div class="logo-svg">
 
-        <path d="M86 39c-13-7-25-7-36 1v40c11-6 23-6 36 0z"
-              fill="#1976d2"/>
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 
-        <!-- Graduation Cap -->
-        <path d="M50 15L90 34 50 53 10 34z"
-              fill="#0b3d82"/>
+                <path d="M14 39c13-7 25-7 36 1v40c-11-6-23-6-36 0z"
+                      fill="#0a478f"/>
 
-        <path d="M78 39v24"
-              stroke="#0b3d82"
-              stroke-width="4"
-              stroke-linecap="round"/>
+                <path d="M86 39c-13-7-25-7-36 1v40c11-6 23-6 36 0z"
+                      fill="#1976d2"/>
 
-        <circle cx="78" cy="67" r="4"
-                fill="#f3b705"/>
+                <path d="M50 15L90 34 50 53 10 34z"
+                      fill="#0b3d82"/>
 
-        <!-- Book lines -->
-        <path d="M26 55h16M26 64h16M58 55h16M58 64h16"
-              stroke="#fff"
-              stroke-width="3"
-              stroke-linecap="round"/>
+                <path d="M78 39v24"
+                      stroke="#0b3d82"
+                      stroke-width="4"
+                      stroke-linecap="round"/>
 
-      </svg>
+                <circle cx="78" cy="67" r="4"
+                        fill="#f3b705"/>
+
+                <path d="M26 55h16M26 64h16M58 55h16M58 64h16"
+                      stroke="#fff"
+                      stroke-width="3"
+                      stroke-linecap="round"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <div class="logo-title">
+                RESULT<span>SATHI</span>
+            </div>
+
+            <div class="logo-tagline">
+                Sarkari Jobs • Results • Updates
+            </div>
+
+        </div>
+
     </div>
 
-    <div>
-      <div class="logo-title">RESULT<span>SATHI</span></div>
-      <div class="logo-tagline">
-        Sarkari Jobs • Results • Updates
-      </div>
+
+    <div class="header-ad">
+
+        <strong>ADVERTISEMENT</strong>
+
+        Your Ad Here
+
     </div>
 
-  </div>
-
-  <div class="ad-box">
-    <strong>ADVERTISEMENT</strong>
-    <span>Your Ad Here</span>
-  </div>
+</div>
 
 </header>
 
-<div class="nav-wrap">
-  <nav class="nav">
-    <a href="#home">HOME</a>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navbar">
+
+<div class="nav-inner">
+
+    <a href="index.html">HOME</a>
+
     <a href="jobs.html">LATEST JOBS</a>
-    <a href="#results">RESULT</a>
-    <a href="#admit">ADMIT CARD</a>
-    <a href="#forms">ONLINE FORM</a>
-    <a href="#answer">ANSWER KEY</a>
-    <a href="#syllabus">SYLLABUS</a>
-  </nav>
+
+    <a href="results.html">RESULT</a>
+
+    <a href="admit-card.html">ADMIT CARD</a>
+
+    <a href="online-form.html">ONLINE FORM</a>
+
+    <a href="answer-key.html">ANSWER KEY</a>
+
+    <a href="syllabus.html">SYLLABUS</a>
+
+    <a href="admission.html">ADMISSION</a>
+
 </div>
 
-<section class="hero" id="home">
-  <h1>Find Sarkari Jobs, Results & More</h1>
+</nav>
 
-  <p>
-    Get Latest Updates on Jobs, Results, Admit Cards,
-    Online Forms, Answer Keys & Syllabus
-  </p>
 
-  <div class="search">
-    <input
-      type="text"
-      placeholder="Search Jobs, Results, Admit Card..."
-    >
-
-    <button>SEARCH</button>
-  </div>
-</section>
+<!-- ================= MAIN ================= -->
 
 <main class="container">
 
-  <h2 class="section-title">Quick Updates</h2>
 
-  <div class="quick-grid">
+<!-- SEARCH -->
 
-    <a href="#jobs" class="quick q1">
-      <div class="icon">💼</div>
-      Latest Jobs
-    </a>
+<section class="search-area">
 
-    <a href="#results" class="quick q2">
-      <div class="icon">🎓</div>
-      Results
-    </a>
+    <div class="search-title">
+        Find Sarkari Jobs, Results & More
+    </div>
 
-    <a href="#admit" class="quick q3">
-      <div class="icon">🎫</div>
-      Admit Card
-    </a>
+    <form class="search-box" onsubmit="return searchSite()">
 
-    <a href="#forms" class="quick q4">
-      <div class="icon">📝</div>
-      Online Forms
-    </a>
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search Jobs, Results, Admit Card..."
+        >
 
-    <a href="#answer" class="quick q5">
-      <div class="icon">🔑</div>
-      Answer Key
-    </a>
+        <button type="submit">
+            SEARCH
+        </button>
 
-    <a href="#syllabus" class="quick q6">
-      <div class="icon">📚</div>
-      Syllabus
-    </a>
+    </form>
 
-  </div>
+</section>
 
-  <div class="cards">
 
-    <!-- JOBS -->
-    <section class="card" id="jobs">
-     <div class="card-head">
-  <h2>Latest Jobs</h2>
-  <a href="jobs.html">View All →</a>
+<!-- NOTICE -->
+
+<div class="notice">
+
+    <div class="notice-title">
+        🔥 LATEST UPDATE
+    </div>
+
+    <div class="notice-text">
+        Latest Government Jobs, Results, Admit Cards & Online Forms - Check Now
+    </div>
+
 </div>
 
-      <ul class="list">
-        <li>
-          <span class="new">NEW</span>
-          Latest Government Job Recruitment
-          <span class="sub">Apply Online</span>
-        </li>
 
-        <li>
-          <span class="new">NEW</span>
-          Bihar Government Vacancy
-          <span class="sub">Check Notification</span>
-        </li>
+<!-- QUICK LINKS -->
 
-        <li>
-          <span class="new">NEW</span>
-          SSC Latest Recruitment
-          <span class="sub">Apply Online</span>
-        </li>
+<div class="quick-grid">
 
-        <li>
-          <span class="new">NEW</span>
-          Railway New Vacancy
-          <span class="sub">Apply Online</span>
-        </li>
-      </ul>
+    <a href="jobs.html" class="quick-box">
+        <span class="quick-icon">💼</span>
+        Latest Jobs
+    </a>
 
-    <a href="./jobs.html">View All →</a>
+    <a href="results.html" class="quick-box">
+        <span class="quick-icon">🎓</span>
+        Results
+    </a>
 
-    <!-- RESULTS -->
-    <section class="card" id="results">
-      <div class="card-head">
-        <h2>Latest Results</h2>
-        <a href="#">View All →</a>
-      </div>
+    <a href="admit-card.html" class="quick-box">
+        <span class="quick-icon">🎫</span>
+        Admit Card
+    </a>
 
-      <ul class="list">
-        <li>
-          <span class="new">NEW</span>
-          Latest Exam Result
-          <span class="sub">Check Result</span>
-        </li>
+    <a href="online-form.html" class="quick-box">
+        <span class="quick-icon">📝</span>
+        Online Forms
+    </a>
 
-        <li>
-          <span class="new">NEW</span>
-          Bihar Board Result
-          <span class="sub">Check Result</span>
-        </li>
+    <a href="answer-key.html" class="quick-box">
+        <span class="quick-icon">🔑</span>
+        Answer Key
+    </a>
 
-        <li>
-          <span class="new">NEW</span>
-          SSC Examination Result
-          <span class="sub">Check Result</span>
-        </li>
+    <a href="syllabus.html" class="quick-box">
+        <span class="quick-icon">📚</span>
+        Syllabus
+    </a>
 
-        <li>
-          <span class="new">NEW</span>
-          Railway Recruitment Result
-          <span class="sub">Check Result</span>
-        </li>
-      </ul>
+</div>
 
-      <a href="#" class="card-btn">View All Results</a>
-    </section>
 
-    <!-- ADMIT CARD -->
-    <section class="card" id="admit">
-      <div class="card-head">
-        <h2>Admit Card</h2>
-        <a href="#">View All →</a>
-      </div>
+<!-- ================= MAIN CONTENT GRID ================= -->
 
-      <ul class="list">
-        <li>
-          <span class="new">NEW</span>
-          Latest Exam Admit Card
-          <span class="sub">Download Now</span>
-        </li>
+<div class="main-grid">
 
-        <li>
-          <span class="new">NEW</span>
-          Railway Admit Card
-          <span class="sub">Download Now</span>
-        </li>
 
-        <li>
-          <span class="new">NEW</span>
-          Bihar Police Admit Card
-          <span class="sub">Download Now</span>
-        </li>
+<!-- LATEST JOBS -->
 
-        <li>
-          <span class="new">NEW</span>
-          SSC Admit Card
-          <span class="sub">Download Now</span>
-        </li>
-      </ul>
+<section class="section-card">
 
-      <a href="#" class="card-btn">View All Admit Cards</a>
-    </section>
+    <div class="section-title">
 
-    <!-- ONLINE FORM -->
-    <section class="card" id="forms">
-      <div class="card-head">
-        <h2>Online Forms</h2>
-        <a href="#">View All →</a>
-      </div>
+        <h2>💼 Latest Government Jobs</h2>
 
-      <ul class="list">
-        <li>
-          <span class="new">NEW</span>
-          Latest Online Form
-          <span class="sub">Apply Online</span>
-        </li>
+        <a href="jobs.html">View All →</a>
 
-        <li>
-          <span class="new">NEW</span>
-          SSC Online Form
-          <span class="sub">Apply Online</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          Railway Online Application
-          <span class="sub">Apply Online</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          Bihar Government Form
-          <span class="sub">Apply Online</span>
-        </li>
-      </ul>
-
-      <a href="#" class="card-btn">View All Forms</a>
-    </section>
-
-    <!-- ANSWER KEY -->
-    <section class="card" id="answer">
-      <div class="card-head">
-        <h2>Answer Key</h2>
-        <a href="#">View All →</a>
-      </div>
-
-      <ul class="list">
-        <li>
-          <span class="new">NEW</span>
-          Latest Answer Key
-          <span class="sub">Download Now</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          SSC Answer Key
-          <span class="sub">Check Now</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          Railway Answer Key
-          <span class="sub">Check Now</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          Other Exam Answer Key
-          <span class="sub">Check Now</span>
-        </li>
-      </ul>
-
-      <a href="#" class="card-btn">View All Answer Keys</a>
-    </section>
-
-    <!-- SYLLABUS -->
-    <section class="card" id="syllabus">
-      <div class="card-head">
-        <h2>Syllabus</h2>
-        <a href="#">View All →</a>
-      </div>
-
-      <ul class="list">
-        <li>
-          <span class="new">NEW</span>
-          Latest Exam Syllabus
-          <span class="sub">View Details</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          SSC Syllabus
-          <span class="sub">View Syllabus</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          Railway Syllabus
-          <span class="sub">View Syllabus</span>
-        </li>
-
-        <li>
-          <span class="new">NEW</span>
-          Bihar Exam Syllabus
-          <span class="sub">View Syllabus</span>
-        </li>
-      </ul>
-
-      <a href="#" class="card-btn">View All Syllabus</a>
-    </section>
-
-  </div>
-
-  <div class="big-ad">
-    <div>
-      <strong>ADVERTISEMENT</strong><br>
-      Your Ad Here
     </div>
-  </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Latest Government Job Recruitment 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                SSC Latest Recruitment 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Railway New Vacancy 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Bihar Government Vacancy 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Police Recruitment 2026
+            </a>
+            <span class="item-action">Details</span>
+        </li>
+
+    </ul>
+
+    <div class="section-footer">
+        <a href="jobs.html">View All Latest Jobs →</a>
+    </div>
+
+</section>
+
+
+<!-- RESULTS -->
+
+<section class="section-card">
+
+    <div class="section-title">
+
+        <h2>🎓 Latest Results</h2>
+
+        <a href="results.html">View All →</a>
+
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="result-details.html">
+                Latest Government Exam Result 2026
+            </a>
+            <span class="item-action">Result</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="result-details.html">
+                SSC Examination Result 2026
+            </a>
+            <span class="item-action">Result</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="result-details.html">
+                Railway Recruitment Result 2026
+            </a>
+            <span class="item-action">Result</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="result-details.html">
+                Bihar Board Result 2026
+            </a>
+            <span class="item-action">Result</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="result-details.html">
+                Police Recruitment Result 2026
+            </a>
+            <span class="item-action">Result</span>
+        </li>
+
+    </ul>
+
+    <div class="section-footer">
+        <a href="results.html">View All Latest Results →</a>
+    </div>
+
+</section>
+
+
+<!-- ADMIT CARD -->
+
+<section class="section-card">
+
+    <div class="section-title">
+
+        <h2>🎫 Latest Admit Card</h2>
+
+        <a href="admit-card.html">View All →</a>
+
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admit-card-details.html">
+                Latest Exam Admit Card 2026
+            </a>
+            <span class="item-action">Download</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admit-card-details.html">
+                Railway Admit Card 2026
+            </a>
+            <span class="item-action">Download</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admit-card-details.html">
+                SSC Admit Card 2026
+            </a>
+            <span class="item-action">Download</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admit-card-details.html">
+                Bihar Police Admit Card
+            </a>
+            <span class="item-action">Download</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admit-card-details.html">
+                Entrance Exam Admit Card
+            </a>
+            <span class="item-action">Download</span>
+        </li>
+
+    </ul>
+
+    <div class="section-footer">
+        <a href="admit-card.html">View All Admit Cards →</a>
+    </div>
+
+</section>
+
+
+<!-- ONLINE FORMS -->
+
+<section class="section-card">
+
+    <div class="section-title">
+
+        <h2>📝 Top Online Forms</h2>
+
+        <a href="online-form.html">View All →</a>
+
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Latest Online Form 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                SSC Online Application 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Railway Online Form 2026
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Bihar Government Form
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="job-details.html">
+                Police Recruitment Form
+            </a>
+            <span class="item-action">Apply</span>
+        </li>
+
+    </ul>
+
+    <div class="section-footer">
+        <a href="online-form.html">View All Online Forms →</a>
+    </div>
+
+</section>
+
+
+<!-- ANSWER KEY -->
+
+<section class="section-card">
+
+    <div class="section-title">
+
+        <h2>🔑 Latest Answer Key</h2>
+
+        <a href="answer-key.html">View All →</a>
+
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="answer-key-details.html">
+                Latest Exam Answer Key 2026
+            </a>
+            <span class="item-action">Check</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="answer-key-details.html">
+                SSC Answer Key 2026
+            </a>
+            <span class="item-action">Check</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="answer-key-details.html">
+                Railway Answer Key 2026
+            </a>
+            <span class="item-action">Check</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="answer-key-details.html">
+                Police Exam Answer Key
+            </a>
+            <span class="item-action">Check</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="answer-key-details.html">
+                Other Exam Answer Key
+            </a>
+            <span class="item-action">Check</span>
+        </li>
+
+    </ul>
+
+    <div class="section-footer">
+        <a href="answer-key.html">View All Answer Keys →</a>
+    </div>
+
+</section>
+
+
+<!-- SYLLABUS -->
+
+<section class="section-card">
+
+    <div class="section-title">
+
+        <h2>📚 Latest Syllabus</h2>
+
+        <a href="syllabus.html">View All →</a>
+
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="syllabus-details.html">
+                Latest Government Exam Syllabus
+            </a>
+            <span class="item-action">View</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="syllabus-details.html">
+                SSC Syllabus 2026
+            </a>
+            <span class="item-action">View</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="syllabus-details.html">
+                Railway Syllabus 2026
+            </a>
+            <span class="item-action">View</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="syllabus-details.html">
+                Police Exam Syllabus
+            </a>
+            <span class="item-action">View</span>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="syllabus-details.html">
+                Bihar Exam Syllabus
+            </a>
+            <span class="item-action">View</span>
+        </li>
+
+    </ul>
+
+    <div class="section-footer">
+        <a href="syllabus.html">View All Syllabus →</a>
+    </div>
+
+</section>
+
+</div>
+
+
+<!-- ================= ADMISSION / UPDATES ================= -->
+
+<div class="three-grid">
+
+
+<section class="section-card">
+
+    <div class="section-title">
+        <h2>🎓 Admission</h2>
+        <a href="admission.html">View All</a>
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admission.html">University Admission 2026</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admission.html">Entrance Exam Form</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="admission.html">College Admission Form</a>
+        </li>
+
+    </ul>
+
+</section>
+
+
+<section class="section-card">
+
+    <div class="section-title">
+        <h2>📄 Document Verification</h2>
+        <a href="#">View All</a>
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Document Verification Updates</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Certificate Verification</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Government Document Services</a>
+        </li>
+
+    </ul>
+
+</section>
+
+
+<section class="section-card">
+
+    <div class="section-title">
+        <h2>📢 Important Updates</h2>
+        <a href="#">View All</a>
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Latest Government Notifications</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Exam Date Updates</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Application Date Extension</a>
+        </li>
+
+    </ul>
+
+</section>
+
+</div>
+
+
+<!-- AD -->
+
+<div class="content-ad">
+    <strong>ADVERTISEMENT</strong>
+    Your Ad Here
+</div>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+        <h2>📂 Government Exam Categories</h2>
+    </div>
+
+    <div class="category-grid">
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🏛️</span>
+            Central Government Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🏢</span>
+            State Government Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🚆</span>
+            Railway Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">👮</span>
+            Police Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🎖️</span>
+            Defence Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🏦</span>
+            Bank Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">📮</span>
+            Post Office Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">💻</span>
+            SSC Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🎓</span>
+            Teaching Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">⚕️</span>
+            Medical Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">🔧</span>
+            ITI / Diploma Jobs
+        </a>
+
+        <a href="jobs.html" class="category">
+            <span class="category-icon">📋</span>
+            Other Jobs
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 10TH / 12TH ================= -->
+
+<div class="three-grid">
+
+<section class="section-card">
+
+    <div class="section-title">
+        <h2>📘 10th / 12th</h2>
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <a href="#">10th Board Result</a>
+        </li>
+
+        <li>
+            <a href="#">12th Board Result</a>
+        </li>
+
+        <li>
+            <a href="#">Board Model Paper</a>
+        </li>
+
+        <li>
+            <a href="#">Scholarship Updates</a>
+        </li>
+
+    </ul>
+
+</section>
+
+
+<section class="section-card">
+
+    <div class="section-title">
+        <h2>🎓 Diploma / ITI</h2>
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <a href="#">ITI Admission</a>
+        </li>
+
+        <li>
+            <a href="#">ITI Result</a>
+        </li>
+
+        <li>
+            <a href="#">Diploma Admission</a>
+        </li>
+
+        <li>
+            <a href="#">Diploma Jobs</a>
+        </li>
+
+    </ul>
+
+</section>
+
+
+<section class="section-card">
+
+    <div class="section-title">
+        <h2>📰 Latest News</h2>
+    </div>
+
+    <ul class="item-list">
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Government Exam Latest News</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Recruitment News</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Education News</a>
+        </li>
+
+        <li>
+            <span class="badge-new">NEW</span>
+            <a href="#">Exam News</a>
+        </li>
+
+    </ul>
+
+</section>
+
+</div>
+
+
+<!-- ================= TOOLS ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+        <h2>🛠️ Useful Tools</h2>
+    </div>
+
+    <div class="tools-grid">
+
+        <a href="#" class="tool">
+            <span class="tool-icon">🎂</span>
+            Age Calculator
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">📄</span>
+            Image Resizer
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">📑</span>
+            JPG to PDF
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">🧾</span>
+            CV Maker
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">📸</span>
+            Photo Tools
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">📝</span>
+            PDF Tools
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">🔢</span>
+            Percentage Calculator
+        </a>
+
+        <a href="#" class="tool">
+            <span class="tool-icon">📊</span>
+            Exam Calculator
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LATEST NEWS ================= -->
+
+<section class="news-section">
+
+    <div class="section-title">
+        <h2>📰 Latest Updates & News</h2>
+        <a href="#">View All →</a>
+    </div>
+
+    <ul class="news-list">
+
+        <li>
+            <span class="news-date">21 Aug 2026</span>
+            <a href="#">
+                Latest Government Recruitment and Examination Updates
+            </a>
+        </li>
+
+        <li>
+            <span class="news-date">21 Aug 2026</span>
+            <a href="#">
+                New Online Forms Released - Check Eligibility & Last Date
+            </a>
+        </li>
+
+        <li>
+            <span class="news-date">20 Aug 2026</span>
+            <a href="#">
+                Latest Admit Card and Result Updates
+            </a>
+        </li>
+
+        <li>
+            <span class="news-date">20 Aug 2026</span>
+            <a href="#">
+                Government Exam Calendar and Important Dates
+            </a>
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="info-box">
+
+    <h2>About ResultSathi</h2>
+
+    <p>
+        ResultSathi is a government job and education information portal
+        providing the latest updates about Sarkari Jobs, Results, Admit
+        Cards, Online Forms, Answer Keys and Exam Syllabus.
+    </p>
+
+    <p>
+        Our goal is to make government job and examination information
+        simple, organized and easy to access for students and job seekers.
+    </p>
+
+</section>
+
 
 </main>
 
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-  <div class="footer-inner">
+<div class="footer-inner">
 
-    <div>
-      <div class="footer-brand">
+
+<div>
+
+    <div class="footer-brand">
         RESULT<span>SATHI</span>
-      </div>
+    </div>
 
-      <p class="footer-text">
+    <p class="footer-text">
         ResultSathi is your trusted source for Sarkari Jobs,
         Sarkari Results, Admit Cards, Online Forms,
         Answer Keys and Government Exam Syllabus.
-      </p>
-    </div>
+    </p>
 
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li>Latest Jobs</li>
-        <li>Results</li>
-        <li>Admit Card</li>
-        <li>Online Forms</li>
-      </ul>
-    </div>
+</div>
 
-    <div class="footer-col">
-      <h3>Information</h3>
-      <ul>
-        <li>Answer Key</li>
-        <li>Syllabus</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-      </ul>
-    </div>
 
-    <div class="footer-col">
-      <h3>Legal</h3>
-      <ul>
-        <li>Privacy Policy</li>
-        <li>Disclaimer</li>
-        <li>Terms & Conditions</li>
-        <li>Copyright Policy</li>
-      </ul>
-    </div>
+<div class="footer-col">
 
-  </div>
+    <h3>Quick Links</h3>
 
-  <div class="copyright">
+    <ul>
+
+        <li><a href="jobs.html">Latest Jobs</a></li>
+
+        <li><a href="results.html">Results</a></li>
+
+        <li><a href="admit-card.html">Admit Card</a></li>
+
+        <li><a href="online-form.html">Online Forms</a></li>
+
+    </ul>
+
+</div>
+
+
+<div class="footer-col">
+
+    <h3>Information</h3>
+
+    <ul>
+
+        <li><a href="answer-key.html">Answer Key</a></li>
+
+        <li><a href="syllabus.html">Syllabus</a></li>
+
+        <li><a href="#">About Us</a></li>
+
+        <li><a href="#">Contact Us</a></li>
+
+    </ul>
+
+</div>
+
+
+<div class="footer-col">
+
+    <h3>Legal</h3>
+
+    <ul>
+
+        <li><a href="#">Privacy Policy</a></li>
+
+        <li><a href="#">Disclaimer</a></li>
+
+        <li><a href="#">Terms & Conditions</a></li>
+
+        <li><a href="#">Copyright Policy</a></li>
+
+    </ul>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
     © 2026 ResultSathi. All Rights Reserved.
-  </div>
+
+</div>
 
 </footer>
+
+
+<script>
+
+function searchSite(){
+
+    const input = document.getElementById("searchInput");
+
+    const query = input.value.trim();
+
+    if(query === ""){
+
+        alert("Please enter something to search.");
+
+        return false;
+
+    }
+
+    /*
+       फिलहाल search page तैयार नहीं है।
+       बाद में इसे database/admin search से connect करेंगे।
+    */
+
+    window.location.href =
+        "jobs.html?search=" + encodeURIComponent(query);
+
+    return false;
+}
+
+</script>
 
 </body>
 </html>
